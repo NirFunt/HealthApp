@@ -25,6 +25,9 @@ public class Server {
                     constructMeals (input,output);
                 }
                 if (theInput.equals("Exit")) {
+                    if (mealList.isEmpty()) {
+                        System.out.println("List is empty");
+                    }
                     for (Meal meal : mealList) {
                         System.out.println(meal.toString());
                     }
@@ -47,7 +50,9 @@ public class Server {
                 break;
             }
             String [] mealsStringArray = theInput.split(",");
-            Meal meal = new Meal(mealsStringArray[0],Integer.parseInt(mealsStringArray[1]),Integer.parseInt(mealsStringArray[2]),mealsStringArray[3]);
+            Double calories = Double.valueOf(mealsStringArray[1]);
+            int score = Integer.valueOf(mealsStringArray[2]);
+            Meal meal = new Meal(mealsStringArray[0],calories,score,mealsStringArray[3]);
             mealList.add(meal);
         }
 
