@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Server {
 
-    static List<Meal> mealList = new ArrayList<>();
+    private static List<Meal> mealList = new ArrayList<>();
     public static void main(String[] args) {
 
 
