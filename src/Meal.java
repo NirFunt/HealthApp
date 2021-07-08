@@ -4,7 +4,7 @@ public class Meal {
     private double calories;
     private int score;
 
-    public Meal(String name, double calories, int score) {
+    public Meal(String name, double calories, int score, String description) {
         this.name = name;
         this.calories = calories;
         this.score = score;
