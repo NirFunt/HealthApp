@@ -28,4 +28,8 @@ public class Meal {
         return description;
     }
 
+    @Override
+    public String toString() {
+       return name + "," + calories + "," + score + "," + description;
+    }
 }
